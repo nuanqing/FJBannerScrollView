@@ -8,5 +8,5 @@
 >
 
 
-![效果图](https://github.com/nuanqing/FJBannerScrollView/1gif.gif)
+![效果图](https://github.com/nuanqing/FJBannerScrollView/blob/master/1gif.gif)
 
