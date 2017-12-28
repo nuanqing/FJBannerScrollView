@@ -8,5 +8,5 @@
 >
 
 
-![效果图](https://github.com/nuanqing/stepCountDemo/blob/master/StepCount/stepCout.gif)
+![效果图](https://github.com/nuanqing/FJBannerScrollView/1gif.gif)
 
