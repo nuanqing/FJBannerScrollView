@@ -1,20 +1,19 @@
 //
-//  FirstView.m
+//  FJBannerScrollView.m
 //  ScrollviewDemo
 //
-//  Created by webplus on 17/12/19.
+//  Created by MacBook on 2017/12/28.
 //  Copyright © 2017年 李Sir灬. All rights reserved.
 //
 
-#import "FirstView.h"
+#import "FJBannerScrollView.h"
 #import "UIImageView+WebCache.h"
-#define CarouselDefalutImageName @"image_morenzizizs.png"
 
 #define Kwidth [UIScreen mainScreen].bounds.size.width
 #define ScrollViewWidth self.scrollView.frame.size.width
 #define ScrollViewHeight self.scrollView.frame.size.height
 
-@interface FirstView ()<UIScrollViewDelegate>
+@interface FJBannerScrollView ()<UIScrollViewDelegate>
 @property (nonatomic, strong) UIImageView *leftIV;
 @property (nonatomic, strong) UIImageView *centerIV;
 @property (nonatomic, strong) UIImageView *rightIV;
@@ -28,7 +27,7 @@
 
 @end
 
-@implementation FirstView
+@implementation FJBannerScrollView
 
 -(instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -40,32 +39,21 @@
 }
 
 -(void)creatUI {
-
     [self addSubview:self.scrollView];
     
     self.leftIV = [[UIImageView alloc] init];
-    self.leftIV.image = [UIImage imageNamed:CarouselDefalutImageName];
-    self.leftIV.layer.cornerRadius = 5;
-    self.leftIV.layer.masksToBounds = YES;
     [self.scrollView addSubview:self.leftIV];
     
     self.centerIV = [[UIImageView alloc] init];
-    self.centerIV.image = [UIImage imageNamed:CarouselDefalutImageName];
-    self.centerIV.layer.cornerRadius = 5;
-    self.centerIV.layer.masksToBounds = YES;
     [self.scrollView addSubview:self.centerIV];
     
     self.rightIV = [[UIImageView alloc] init];
-    self.rightIV.image = [UIImage imageNamed:CarouselDefalutImageName];
-    self.rightIV.layer.cornerRadius = 5;
-    self.rightIV.layer.masksToBounds = YES;
     [self.scrollView addSubview:self.rightIV];
     
     self.scrollView.delegate = self;
-
 }
 //初始化轮播数组
- -(void)setCarouseWithArray:(NSArray *)array {
+-(void)setCarouseWithArray:(NSArray *)array {
     if (array.count == 0) {
         return;
     }
@@ -85,7 +73,7 @@
         _pageControl = [[UIPageControl alloc] init];
         _pageControl.currentPageIndicatorTintColor = [UIColor colorWithRed:245.0/255 green:98.0/255 blue:45.0/255 alpha:1.0];
         _pageControl.pageIndicatorTintColor = [UIColor whiteColor];
-        [self.superview addSubview:_pageControl];
+        [self addSubview:_pageControl];
     }
     
     return _pageControl;
@@ -95,13 +83,33 @@
     _imgWidth = imgWidth;
 }
 
+- (void)setDefaultImg:(NSString *)defaultImg {
+    _defaultImg = defaultImg;
+    self.leftIV.image = [UIImage imageNamed:_defaultImg];
+    self.centerIV.image = [UIImage imageNamed:_defaultImg];
+    self.rightIV.image = [UIImage imageNamed:_defaultImg];
+}
+
+- (void)setImgCornerRadius:(CGFloat)imgCornerRadius {
+    _imgCornerRadius = imgCornerRadius;
+    if (imgCornerRadius == 0) {
+        return;
+    }
+    self.leftIV.layer.cornerRadius = _imgCornerRadius;
+    self.leftIV.layer.masksToBounds = YES;
+    self.centerIV.layer.cornerRadius = _imgCornerRadius;
+    self.centerIV.layer.masksToBounds = YES;
+    self.rightIV.layer.cornerRadius = _imgCornerRadius;
+    self.rightIV.layer.masksToBounds = YES;
+}
+
 - (void)setImgMargnPadding:(CGFloat)imgMargnPadding {
     _imgMargnPadding = imgMargnPadding;
     self.scrollView.frame = CGRectMake((Kwidth - (self.imgWidth + imgMargnPadding))/2, 0, self.imgWidth + imgMargnPadding, self.frame.size.height);
-    self.pageControl.frame = CGRectMake(0, ScrollViewHeight - 20, ScrollViewWidth, 20);
+    self.pageControl.frame = CGRectMake(0, ScrollViewHeight - 25, Kwidth, 20);
     [self.scrollView setContentSize:CGSizeMake(ScrollViewWidth * 3, ScrollViewHeight)];
     [self.scrollView setContentOffset:CGPointMake(ScrollViewWidth, 0)];
-
+    
     [self updateViewFrame];
 }
 //定时器自动轮播
@@ -143,13 +151,13 @@
     NSString *centerString = [centerDic objectForKey:@"image"];
     NSString *rightString = [rightDic objectForKey:@"image"];
     
-
+    
     [self.leftIV sd_setImageWithURL:[NSURL URLWithString:leftString]
-                   placeholderImage:[UIImage imageNamed:CarouselDefalutImageName]];
+                   placeholderImage:[UIImage imageNamed:self.defaultImg]];
     [self.centerIV sd_setImageWithURL:[NSURL URLWithString:centerString]
-                     placeholderImage:[UIImage imageNamed:CarouselDefalutImageName]];
+                     placeholderImage:[UIImage imageNamed:self.defaultImg]];
     [self.rightIV sd_setImageWithURL:[NSURL URLWithString:rightString]
-                    placeholderImage:[UIImage imageNamed:CarouselDefalutImageName]];
+                    placeholderImage:[UIImage imageNamed:self.defaultImg]];
     
     [self.pageControl setCurrentPage:_currentPage];
     
@@ -158,8 +166,8 @@
 }
 
 -(void)click {
-    if ([_Bannerdelegate respondsToSelector:@selector(selectedIndex:)] ) {
-        [_Bannerdelegate selectedIndex:_currentPage];
+    if ([_bannerScrolldelegate respondsToSelector:@selector(selectedIndex:)] ) {
+        [_bannerScrolldelegate selectedIndex:_currentPage];
     }
 }
 
@@ -252,3 +260,4 @@
 
 
 @end
+

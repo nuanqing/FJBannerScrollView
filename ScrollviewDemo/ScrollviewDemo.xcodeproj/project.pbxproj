@@ -17,8 +17,8 @@
 		AA172B991FE924E400E9221A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA172B971FE924E400E9221A /* LaunchScreen.storyboard */; };
 		AA172BA41FE924E500E9221A /* ScrollviewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA172BA31FE924E500E9221A /* ScrollviewDemoTests.m */; };
 		AA172BAF1FE924E500E9221A /* ScrollviewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA172BAE1FE924E500E9221A /* ScrollviewDemoUITests.m */; };
-		AA172BBE1FE9253D00E9221A /* FirstView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA172BBD1FE9253D00E9221A /* FirstView.m */; };
 		D54C6A3026A2C361CE587F88 /* libPods-ScrollviewDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1396076D747C0D6A99DB5C9 /* libPods-ScrollviewDemoUITests.a */; };
+		FADFB9C11FF52445004ACB03 /* FJBannerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FADFB9C01FF52445004ACB03 /* FJBannerScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,14 +58,14 @@
 		AA172BAA1FE924E500E9221A /* ScrollviewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollviewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA172BAE1FE924E500E9221A /* ScrollviewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollviewDemoUITests.m; sourceTree = "<group>"; };
 		AA172BB01FE924E500E9221A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA172BBC1FE9253D00E9221A /* FirstView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstView.h; sourceTree = "<group>"; };
-		AA172BBD1FE9253D00E9221A /* FirstView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstView.m; sourceTree = "<group>"; };
 		AD36BAE8312CC8993C97DE96 /* Pods-ScrollviewDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollviewDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollviewDemoUITests/Pods-ScrollviewDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1396076D747C0D6A99DB5C9 /* libPods-ScrollviewDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ScrollviewDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5A354DF3580C9DEF4978250 /* Pods-ScrollviewDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollviewDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollviewDemoUITests/Pods-ScrollviewDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DEF6B30F4DF5958D9A898FFA /* Pods-ScrollviewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollviewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollviewDemo/Pods-ScrollviewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		EE7E489E3455B39C4DA84643 /* libPods-ScrollviewDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ScrollviewDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F4B563DFCC173C6471A141 /* Pods-ScrollviewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollviewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollviewDemo/Pods-ScrollviewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		FADFB9BF1FF52445004ACB03 /* FJBannerScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FJBannerScrollView.h; sourceTree = "<group>"; };
+		FADFB9C01FF52445004ACB03 /* FJBannerScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FJBannerScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,8 +138,8 @@
 				AA172B8D1FE924E400E9221A /* AppDelegate.m */,
 				AA172B8F1FE924E400E9221A /* ViewController.h */,
 				AA172B901FE924E400E9221A /* ViewController.m */,
-				AA172BBC1FE9253D00E9221A /* FirstView.h */,
-				AA172BBD1FE9253D00E9221A /* FirstView.m */,
+				FADFB9BF1FF52445004ACB03 /* FJBannerScrollView.h */,
+				FADFB9C01FF52445004ACB03 /* FJBannerScrollView.m */,
 				AA172B921FE924E400E9221A /* Main.storyboard */,
 				AA172B951FE924E400E9221A /* Assets.xcassets */,
 				AA172B971FE924E400E9221A /* LaunchScreen.storyboard */,
@@ -478,7 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA172B911FE924E400E9221A /* ViewController.m in Sources */,
-				AA172BBE1FE9253D00E9221A /* FirstView.m in Sources */,
+				FADFB9C11FF52445004ACB03 /* FJBannerScrollView.m in Sources */,
 				AA172B8E1FE924E400E9221A /* AppDelegate.m in Sources */,
 				AA172B8B1FE924E400E9221A /* main.m in Sources */,
 			);
@@ -722,6 +722,7 @@
 				AA172BB51FE924E500E9221A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA172BB61FE924E500E9221A /* Build configuration list for PBXNativeTarget "ScrollviewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -730,6 +731,7 @@
 				AA172BB81FE924E500E9221A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA172BB91FE924E500E9221A /* Build configuration list for PBXNativeTarget "ScrollviewDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -738,6 +740,7 @@
 				AA172BBB1FE924E500E9221A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
