@@ -64,6 +64,7 @@
 		DEF6B30F4DF5958D9A898FFA /* Pods-ScrollviewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollviewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollviewDemo/Pods-ScrollviewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		EE7E489E3455B39C4DA84643 /* libPods-ScrollviewDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ScrollviewDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F4B563DFCC173C6471A141 /* Pods-ScrollviewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollviewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ScrollviewDemo/Pods-ScrollviewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		FA0595ED200DE0600085F9D2 /* MacrosHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacrosHeader.h; sourceTree = "<group>"; };
 		FADFB9BF1FF52445004ACB03 /* FJBannerScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FJBannerScrollView.h; sourceTree = "<group>"; };
 		FADFB9C01FF52445004ACB03 /* FJBannerScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FJBannerScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +135,7 @@
 		AA172B881FE924E400E9221A /* ScrollviewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FA0595ED200DE0600085F9D2 /* MacrosHeader.h */,
 				AA172B8C1FE924E400E9221A /* AppDelegate.h */,
 				AA172B8D1FE924E400E9221A /* AppDelegate.m */,
 				AA172B8F1FE924E400E9221A /* ViewController.h */,

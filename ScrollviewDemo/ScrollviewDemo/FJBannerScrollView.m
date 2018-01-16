@@ -8,8 +8,8 @@
 
 #import "FJBannerScrollView.h"
 #import "UIImageView+WebCache.h"
+#import "MacrosHeader.h"
 
-#define Kwidth [UIScreen mainScreen].bounds.size.width
 #define ScrollViewWidth self.scrollView.frame.size.width
 #define ScrollViewHeight self.scrollView.frame.size.height
 
@@ -105,8 +105,8 @@
 
 - (void)setImgMargnPadding:(CGFloat)imgMargnPadding {
     _imgMargnPadding = imgMargnPadding;
-    self.scrollView.frame = CGRectMake((Kwidth - (self.imgWidth + imgMargnPadding))/2, 0, self.imgWidth + imgMargnPadding, self.frame.size.height);
-    self.pageControl.frame = CGRectMake(0, ScrollViewHeight - 25, Kwidth, 20);
+    self.scrollView.frame = CGRectMake((fj_screenWidth - (self.imgWidth + imgMargnPadding))/2, 0, self.imgWidth + imgMargnPadding, self.frame.size.height);
+    self.pageControl.frame = CGRectMake(0, ScrollViewHeight - 25, fj_screenWidth, 20);
     [self.scrollView setContentSize:CGSizeMake(ScrollViewWidth * 3, ScrollViewHeight)];
     [self.scrollView setContentOffset:CGPointMake(ScrollViewWidth, 0)];
     
