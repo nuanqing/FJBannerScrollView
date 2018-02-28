@@ -1,7 +1,7 @@
 # FJBannerScrollView
-banner轮播
+
 >
->简介：腾讯视频，爱奇艺轮播视觉效果很不错，抽时间研究了一下，自己仿写了一个，拥有轮播动画效果，可以自定义
+>简介：仿腾讯视频，爱奇艺轮播，拥有轮播动画效果，可以自定义
 >
 
 ![效果图](https://github.com/nuanqing/FJBannerScrollView/blob/master/1gif.gif)
@@ -34,5 +34,6 @@ _bannerView.bannerScrolldelegate = self;
 NSLog(@"%ld",(long)index);
 }
 ```
-##注意：
-需要添加SDWebImage依赖
+注意：
+------
+使用时需要添加SDWebImage依赖
